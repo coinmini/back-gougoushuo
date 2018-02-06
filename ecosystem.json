@@ -1,0 +1,28 @@
+{
+  "apps": [
+    {
+      "name": "gougoushuo",
+      "script": "app.js",
+      "env": {
+        "COMMON_VARIABLE": "true"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+  "deploy": {
+    "production": {
+      "user": "dappnode_manager",
+      "host": ["39.106.181.190"],
+      "port": "22",
+      "ref": "origin/master",
+      "repo": "git@github.com:coinmini/back-gougoushuo.git",
+      "path": "/www/gougoushuo/production",
+      "ssh_options": "StrictHostKeyChecking=no",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
