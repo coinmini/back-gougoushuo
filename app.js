@@ -34,7 +34,7 @@
 var fs = require('fs')
 var path = require('path')
 var mongoose = require('mongoose')
-var db = 'mongodb://localhost/imooc-app'
+var db = 'mongodb://127.0.0.1:27017/imooc-app'
 
 mongoose.Promise = require('bluebird')
 mongoose.connect(db)
@@ -99,5 +99,5 @@ app
   .use(router.routes())
   .use(router.allowedMethods())
 
-app.listen(3000)
-console.log('listening:3000')
+app.listen(30000)
+console.log('listening:30000')

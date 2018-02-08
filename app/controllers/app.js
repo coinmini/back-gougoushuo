@@ -4,6 +4,12 @@ var mongoose = require('mongoose')
 var User = mongoose.model('User')
 var robot = require('../service/robot')
 
+exports.homePage = ctx =>{
+  ctx.body = {
+    success: true,
+    msg: '必须通过api访问'}
+}
+
 
 exports.signature = ctx =>{
 

@@ -35,5 +35,7 @@ module.exports = function(){
   //votes
   router.post('/up', App.hasBody, App.hasToken, Creation.up)
 
+ // root
+  router.get('/', App.homePage)
   return router
 }
