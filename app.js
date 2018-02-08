@@ -34,7 +34,7 @@
 var fs = require('fs')
 var path = require('path')
 var mongoose = require('mongoose')
-var db = 'mongodb://127.0.0.1:27017/imooc-app'
+var db = 'mongodb://localhost/imooc-app'
 
 mongoose.Promise = require('bluebird')
 mongoose.connect(db)
