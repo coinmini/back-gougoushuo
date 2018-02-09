@@ -34,7 +34,7 @@
 var fs = require('fs')
 var path = require('path')
 var mongoose = require('mongoose')
-var db = 'mongodb://192.169.136.56:27071/imooc-app'  //这里填local host
+var db = 'mongodb://192.169.136.56:27017/imooc-app'  //这里填local host
 
 mongoose.Promise = require('bluebird')
 mongoose.connect(db)
