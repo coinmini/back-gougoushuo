@@ -34,12 +34,16 @@
 var fs = require('fs')
 var path = require('path')
 var mongoose = require('mongoose')
-var env = process.env.NODE_ENV || 'development'
-var db = 'mongodb://appnode_manager_runner:godaddyL@@0630@127.0.0.1:27017/imooc-app'  //这里填local host
+// var env = process.env.NODE_ENV || 'development'
+// var db = 'mongodb://appnode_manager_runner:godaddyL@@0630@127.0.0.1:27017/imooc-app'  //这里填local host
 
-if (env = 'development'){
-  db = 'mongodb://localhost/imooc-app'
-}
+var db = 'mongodb://localhost/imooc-app'  //这里填local host
+
+
+// if (env = 'development'){
+//   db = 'mongodb://localhost/imooc-app'
+// }
+
 mongoose.Promise = require('bluebird')
 mongoose.connect(db)
 
