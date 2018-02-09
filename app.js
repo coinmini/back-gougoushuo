@@ -34,15 +34,15 @@
 var fs = require('fs')
 var path = require('path')
 var mongoose = require('mongoose')
-// var env = process.env.NODE_ENV || 'development'
+var env = process.env.NODE_ENV || 'development'  // 如果环境变量没有传，就用development模式；传的话，就用传的环境变量
 // var db = 'mongodb://appnode_manager_runner:godaddyL@@0630@127.0.0.1:27017/imooc-app'  //这里填local host
 
-var db = 'mongodb://localhost/imooc-app'  //这里填local host
+var db = 'mongodb://127.0.0.1:27017/imooc-app'  //这里默认连网上的数据库
 
 
-// if (env = 'development'){
-//   db = 'mongodb://localhost/imooc-app'
-// }
+if (env = 'development'){
+  db = 'mongodb://localhost/imooc-app'
+}
 
 mongoose.Promise = require('bluebird')
 mongoose.connect(db)
