@@ -37,7 +37,7 @@ var mongoose = require('mongoose')
 var env = process.env.NODE_ENV || 'development'  // 如果环境变量没有传，就用development模式；传的话，就用传的环境变量
 // var db = 'mongodb://appnode_manager_runner:godaddyL@@0630@127.0.0.1:27017/imooc-app'  //这里填local host
 
-var db = 'mongodb://127.0.0.1:27017/imooc-app'  //这里默认连网上的数据库
+var db = 'mongodb://localhost/imooc-app'  //这里默认连网上的数据库
 
 
 if (env = 'development'){
